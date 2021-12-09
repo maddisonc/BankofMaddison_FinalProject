@@ -15,10 +15,9 @@ public class LoginScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Wire up the button to do stuff
-        // get the button
+        // define login button
         Button login = findViewById(R.id.loginButton);
-        // set what happens when user clicks
+        // calls method to open new screen
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,6 +27,7 @@ public class LoginScreen extends AppCompatActivity {
         }); // end login listener
     }
 
+    // opens options screen
     public void openAfterLogin()
     {
         Intent intent = new Intent(this, OptionsScreen.class);

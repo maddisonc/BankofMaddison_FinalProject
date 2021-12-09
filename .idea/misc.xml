@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/91093567/AndroidStudioProjects/BankofMaddisonV3/app/src/main/res/layout/activity_account_screen.xml" value="0.24547101449275363" />
         <entry key="..\:/Users/91093567/AndroidStudioProjects/BankofMaddisonV3/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/91093567/AndroidStudioProjects/BankofMaddisonV3/app/src/main/res/layout/activity_options_screen.xml" value="0.2536231884057971" />
+        <entry key="..\:/Users/91093567/AndroidStudioProjects/BankofMaddisonV3/app/src/main/res/layout/activity_request_screen2.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/91093567/AndroidStudioProjects/BankofMaddisonV3/app/src/main/res/layout/activity_transfer_screen.xml" value="0.24010416666666667" />
       </map>
     </option>
   </component>
