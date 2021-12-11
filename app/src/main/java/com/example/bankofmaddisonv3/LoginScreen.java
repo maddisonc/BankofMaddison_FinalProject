@@ -31,7 +31,8 @@ public class LoginScreen extends AppCompatActivity {
     private EditText passwordInput;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -43,7 +44,8 @@ public class LoginScreen extends AppCompatActivity {
         Button login = findViewById(R.id.loginButton);
 
         // calls method to open new screen
-        login.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view) {
                 Log.i("Bank", "login btn pressed");

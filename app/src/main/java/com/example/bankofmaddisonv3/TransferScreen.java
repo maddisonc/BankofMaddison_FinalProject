@@ -33,20 +33,22 @@ public class TransferScreen extends AppCompatActivity {
         // define transfer button
         Button transfer = findViewById(R.id.transferFundsButton);
 
-        transfer.setOnClickListener(new View.OnClickListener() {
+        transfer.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
                 Log.i("transfer", "transfer btn pressed");
-                String fundsAmt = fundsAmtInput.getText().toString();
-                String ID = IDInput.getText().toString();
+                String fundsTransferAmt = fundsAmtInput.getText().toString();
+                String recipientID = IDInput.getText().toString();
 
-                if (fundsAmt.isEmpty() || ID.isEmpty())
+                if (fundsTransferAmt.isEmpty() || recipientID.isEmpty())
                 {
                     Toast.makeText(TransferScreen.this, "Please enter the funds amount and recipient ID.", Toast.LENGTH_SHORT).show();
                 } // end if funds input and recipient input are empty
                 else
                 {
-                    TransferValid = validateTransfer(fundsAmt, ID);
+                    TransferValid = validateTransfer(fundsTransferAmt, recipientID);
 
                     if (!TransferValid)
                     {
@@ -54,10 +56,9 @@ public class TransferScreen extends AppCompatActivity {
                     }
                     else
                     {
-                        Toast.makeText(TransferScreen.this, "Funds will be sent after review.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(TransferScreen.this, "Funds will be sent!", Toast.LENGTH_SHORT).show();
                     }
-                }
-
+                } // end else fields are not empty
             } // end onClick
         }); // end listener
     } // end onCreate
@@ -85,6 +86,6 @@ public class TransferScreen extends AppCompatActivity {
         } // if funds is not negative
 
         return isTransferValid;
-    }
+    } // end validateTransfer
 
 } // end TransferScreen class
