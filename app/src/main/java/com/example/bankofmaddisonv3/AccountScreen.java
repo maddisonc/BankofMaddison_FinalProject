@@ -12,8 +12,11 @@ public class AccountScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account_screen);
 
-        //
-        TextView userDisplay = (TextView)findViewById(R.id.displayUser);
-        userDisplay.setText(LoginScreen.getUser());
+        // implements loginScreen getters
+        TextView userDisplay = (TextView)findViewById(R.id.textDisplayUser);
+        userDisplay.setText(LoginScreen.getUsername());
+
+        TextView passDisplay = (TextView)findViewById(R.id.textDisplayPass);
+        passDisplay.setText(LoginScreen.getPassword());
     }
 }

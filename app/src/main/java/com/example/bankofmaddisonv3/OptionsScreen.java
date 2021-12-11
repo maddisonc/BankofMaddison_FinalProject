@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class OptionsScreen extends AppCompatActivity {
 
@@ -14,6 +15,12 @@ public class OptionsScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options_screen);
+
+        // sets user textbox at bottom left to username
+        // implements LoginScreen class by passing in username
+        TextView displayUserID = (TextView)findViewById(R.id.displayUserID);
+        displayUserID.setText(LoginScreen.getUsername());
+
 
         // define acc button
         Button acc = findViewById(R.id.accButton);

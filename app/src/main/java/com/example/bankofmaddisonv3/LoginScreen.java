@@ -10,18 +10,24 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
+
 public class LoginScreen extends AppCompatActivity {
     // array of usernames
-    String usernames[] = {"user1", "user2", "user3"};
+    public static String usernamesArr[] = {"user1", "user2", "user3"};
 
     // array of passwords
-    String passwords[] = {"ps1", "ps2", "ps3"};
+    public static String passwordsArr[] = {"ps1", "ps2", "ps3"};
 
     // boolean that holds whether or not username correlates with password in arrays
     boolean loginIsValid = false;
 
+    // stores username and password for getters
+    public static String username;
+    public static String password;
+
     // stores user's input
-    private static EditText usernameInput;
+    private EditText usernameInput;
     private EditText passwordInput;
 
     @Override
@@ -51,6 +57,8 @@ public class LoginScreen extends AppCompatActivity {
                 else
                 {
                     loginIsValid = validateLogin(inputUser, inputPass); // boolean for valid credentials
+                    username = inputUser; // sets username
+                    password = inputPass; // sets password
 
                     if (!loginIsValid)
                     {
@@ -71,25 +79,44 @@ public class LoginScreen extends AppCompatActivity {
     } // end onCreate
 
     // getters
-    public static String getUser()
+    public static String getUsername()
     {
-        String username = usernameInput.toString();
         return username;
     }
 
-    public String getPass()
+    public static String getPassword()
     {
-        return passwordInput.toString();
+        return password;
     }
 
-    // brain that validates login (if user correlates with password in arrays)
-    private boolean validateLogin (String user, String pass)
+    public static String[] getUsernamesArr()
     {
-        if (user.equals(usernames[0]) && pass.equals(passwords[0]))
+        return usernamesArr;
+    }
+
+    public static String[] getPasswordsArr()
+    {
+        return passwordsArr;
+    }
+
+
+    // brain that validates login (if user correlates with password in arrays)
+    public boolean validateLogin (String user, String pass)
+    {
+        boolean isValid = true;
+        for (int i = 0; i < usernamesArr.length; i++)
         {
-            return true;
-        }
-        return false;
+            if (user.equals(usernamesArr[i]) && pass.equals(passwordsArr[i]))
+            {
+                isValid = true;
+                i = usernamesArr.length+1;
+            }
+            else
+            {
+                isValid = false;
+            }
+        } // end loop that lasts as long as number of usernames in array
+        return isValid;
     } // end login validator
 
     // opens options screen
