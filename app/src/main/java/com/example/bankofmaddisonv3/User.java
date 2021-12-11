@@ -5,13 +5,18 @@ public class User implements Comparable
     // 1) Initialize variables
     private String username;
     private String password;
-    private double funds;
+    private static double funds;
 
     // 2) Constructors
     public User (String username, String password, double funds)
     {
         this.username = username;
         this.password = password;
+        this.funds = funds;
+    } // end full constructor
+
+    public User (double funds)
+    {
         this.funds = funds;
     } // end full constructor
 
@@ -24,7 +29,7 @@ public class User implements Comparable
     {
         return password;
     }
-    public double getFunds ()
+    public static double getFunds()
     {
         return funds;
     }
