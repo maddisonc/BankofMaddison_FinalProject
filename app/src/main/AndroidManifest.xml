@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BankofMaddisonV3">
         <activity
+            android:name=".CompareScreen"
+            android:exported="false" />
+        <activity
             android:name=".RequestScreen"
             android:exported="false" />
         <activity

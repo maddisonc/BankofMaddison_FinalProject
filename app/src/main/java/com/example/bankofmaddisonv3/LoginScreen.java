@@ -13,6 +13,10 @@ import android.widget.Toast;
 import java.lang.reflect.Array;
 
 public class LoginScreen extends AppCompatActivity {
+//    User user1 = new User (usernamesArr[1], passwordsArr[1], 50.00);
+//    User user2 = new User (usernamesArr[2], passwordsArr[2], 100.00);
+//    User user3 = new User (usernamesArr[3], passwordsArr[3], 200.00);
+
     // array of usernames
     public static String usernamesArr[] = {"user1", "user2", "user3"};
 

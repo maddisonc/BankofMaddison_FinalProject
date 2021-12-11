@@ -21,6 +21,16 @@ public class OptionsScreen extends AppCompatActivity {
         TextView displayUserID = (TextView)findViewById(R.id.displayUserID);
         displayUserID.setText(LoginScreen.getUsername());
 
+        // define compare button
+        Button compare = findViewById(R.id.compareButton);
+        // calls method to open acc screen
+        compare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i("Bank", "compare pressed");
+                openAfterCompare();
+            }
+        }); // end acc listener
 
         // define acc button
         Button acc = findViewById(R.id.accButton);
@@ -56,6 +66,13 @@ public class OptionsScreen extends AppCompatActivity {
         }); // end request listener
 
     } // end onCreate
+
+    // opens compare screen
+    public void openAfterCompare()
+    {
+        Intent intent = new Intent(this, CompareScreen.class);
+        startActivity(intent);
+    }
 
     // opens acc screen
     public void openAfterAcc()
