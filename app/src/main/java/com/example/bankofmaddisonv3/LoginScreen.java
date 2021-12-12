@@ -39,15 +39,9 @@ public class LoginScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // sets textView to number of users
-//        TextView numUsersDisplay = (TextView)findViewById(R.id.displayUsersNum);
-//        for (int i = 0; i < usernamesArr.length-1; i++)
-//        {
-//            numUsers++;
-//        } // end for loop to count how many users in array
-//        numUsersDisplay.setText(numUsers);
-
+        // defines textview that will hold number of users
         TextView numUsersDisplay = (TextView)findViewById(R.id.displayUsersNum);
+        // sets textview to number of users by calling method
         numUsersDisplay.setText(setNumUsers() + " ");
 
         // define inputs
@@ -86,7 +80,7 @@ public class LoginScreen extends AppCompatActivity {
                         openAfterLogin();
                     } // else login was correct
 
-                } // end else if
+                } // end else not empty
 
             } // end login button pressed
 
@@ -116,31 +110,42 @@ public class LoginScreen extends AppCompatActivity {
     }
 
 
+    // brains:
 
-    // brain that validates login (if user correlates with password in arrays)
+    // brain that validates login (if username correlates with password in arrays)
     public boolean validateLogin (String user, String pass)
     {
+        // holds whether or not login is valid
         boolean isValid = true;
+
+        // for length of usernames (how many users)
         for (int i = 0; i < usernamesArr.length; i++)
         {
+            // if the username correlates to the password with the same index
             if (user.equals(usernamesArr[i]) && pass.equals(passwordsArr[i]))
             {
+                // login is valid
                 isValid = true;
+                // exit for loop
                 i = usernamesArr.length+1;
-            }
+            } // end if
             else
             {
                 isValid = false;
-            }
+            } // end else username does not have corresponding password, or just invalid input
         } // end loop that lasts as long as number of usernames in array
         return isValid;
     } // end login validator
 
+    // returns the number of users by counting number of elements in array
     public int setNumUsers ()
     {
+        // holds number of users
         int userCount = 0;
+        // for loops with length of usernames array
         for (int i = 0; i < usernamesArr.length; i++)
         {
+            // increment count
             userCount++;
         }
         return userCount;

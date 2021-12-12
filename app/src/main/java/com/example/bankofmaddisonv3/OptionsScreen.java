@@ -25,14 +25,14 @@ public class OptionsScreen extends AppCompatActivity {
 
         // define compare button
         Button compare = findViewById(R.id.compareButton_options);
-        // calls method to open acc screen
+        // calls method to open compare screen
         compare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("Bank", "compare pressed");
+                Log.i("options", "compare pressed");
                 openAfterCompare();
             }
-        }); // end acc listener
+        }); // end compare listener
 
         // define acc button
         Button acc = findViewById(R.id.accButton_options);
@@ -40,29 +40,29 @@ public class OptionsScreen extends AppCompatActivity {
         acc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("Bank", "acc pressed");
+                Log.i("options", "acc pressed");
                 openAfterAcc();
             }
         }); // end acc listener
 
         // define transfer button
         Button transfer = findViewById(R.id.transferButton_options);
-        // calls method to open acc screen
+        // calls method to open transfer screen
         transfer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("Bank", "transfer pressed");
+                Log.i("options", "transfer pressed");
                 openAfterTransfer();
             }
         }); // end transfer listener
 
         // define request button
-        Button rq = findViewById(R.id.requestButton_options);
-        // calls method to open acc screen
-        rq.setOnClickListener(new View.OnClickListener() {
+        Button request = findViewById(R.id.requestButton_options);
+        // calls method to open request screen
+        request.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("Bank", "rq pressed");
+                Log.i("options", "request pressed");
                 openAfterRequest();
             }
         }); // end request listener

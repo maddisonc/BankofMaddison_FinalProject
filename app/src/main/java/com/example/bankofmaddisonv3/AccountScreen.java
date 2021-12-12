@@ -13,6 +13,7 @@ public class AccountScreen extends AppCompatActivity {
         setContentView(R.layout.activity_account_screen);
 
         // implements loginScreen getters
+        // changes textview to show username and password
         TextView userDisplay = (TextView)findViewById(R.id.textDisplayUser);
         userDisplay.setText(LoginScreen.getUsername());
 

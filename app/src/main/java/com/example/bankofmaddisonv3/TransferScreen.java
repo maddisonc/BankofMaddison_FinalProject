@@ -19,6 +19,7 @@ public class TransferScreen extends AppCompatActivity {
     private EditText fundsAmtInput;
     private EditText IDInput;
 
+    // boolean that holds whether or not transfer is valid
     boolean TransferValid = true;
 
     @Override
@@ -33,13 +34,16 @@ public class TransferScreen extends AppCompatActivity {
         // define transfer button
         Button transfer = findViewById(R.id.transferFundsButton);
 
+        // when transfer pressed
         transfer.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
                 Log.i("transfer", "transfer btn pressed");
+                // get funds from input
                 String fundsTransferAmt = fundsAmtInput.getText().toString();
+                // get recipient id from input
                 String recipientID = IDInput.getText().toString();
 
                 if (fundsTransferAmt.isEmpty() || recipientID.isEmpty())
@@ -48,6 +52,7 @@ public class TransferScreen extends AppCompatActivity {
                 } // end if funds input and recipient input are empty
                 else
                 {
+                    // bool calls validate brain, passes in funds amount, id
                     TransferValid = validateTransfer(fundsTransferAmt, recipientID);
 
                     if (!TransferValid)
@@ -57,7 +62,7 @@ public class TransferScreen extends AppCompatActivity {
                     else
                     {
                         Toast.makeText(TransferScreen.this, "Funds will be sent after review!", Toast.LENGTH_SHORT).show();
-                    }
+                    } // end else valid
                 } // end else fields are not empty
             } // end onClick
         }); // end listener

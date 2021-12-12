@@ -30,6 +30,7 @@ public class CompareScreen extends AppCompatActivity {
         TextView displayUserID = (TextView)findViewById(R.id.displayUserID_compare);
         displayUserID.setText(LoginScreen.getUsername());
 
+        // textviews that hold comparison statements
         TextView compare1 = (TextView)findViewById(R.id.compareWithUser2Output);
         TextView compare2 = (TextView)findViewById(R.id.compareWithUser3Output);
 

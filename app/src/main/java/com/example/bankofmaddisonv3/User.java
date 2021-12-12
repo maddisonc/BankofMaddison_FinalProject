@@ -56,18 +56,21 @@ public class User implements Comparable
     }
 
     @Override
-    public int compareTo(Object ou) {
+    // interface that compares two users' funds
+    public int compareTo(Object otherUser) {
         int output = 0;
-        if (this.funds < ((User)ou).getFunds())
+        // if current user has less, return -1
+        if (this.funds < ((User)otherUser).getFunds())
         {
             output = -1;
         }
-        else if (this.funds > ((User)ou).getFunds())
+        // if current user has greater funds, return 1
+        else if (this.funds > ((User)otherUser).getFunds())
         {
             output = 1;
         }
         return output;
-    }
+    } // end compareTo
 
 
 } // end User class
