@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+
 public class CompareScreen extends AppCompatActivity {
 
-    User user1 = new User (50.00);
-    User user2 = new User (100.00);
-    User user3 = new User (200.00);
+    User user1 = new User(50.25);
+    User user2 = new User(60.47);
+    User user3 = new User(70.68);
 
 //    // stores user's input
 //    private EditText compareWithIDInput;
@@ -24,35 +26,41 @@ public class CompareScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compare_screen);
 
+        // sets current user at bottom right using LoginScreen class getter
+        TextView displayUserID = (TextView)findViewById(R.id.displayUserID_compare);
+        displayUserID.setText(LoginScreen.getUsername());
+
         TextView compare1 = (TextView)findViewById(R.id.compareWithUser2Output);
         TextView compare2 = (TextView)findViewById(R.id.compareWithUser3Output);
+
+        DecimalFormat fmt = new DecimalFormat("0.##");
 
         // compare user 1 funds with user 2
         if (user1.compareTo(user2) == 0)
         {
-            compare1.setText("User1 has the same amount as User2.");
+            compare1.setText("User1 has the same amount as User2.  User1 has " + fmt.format(user1.getFunds()) + ".  User2 has " + fmt.format(user2.getFunds()) + ".");
         }
         else if (user1.compareTo(user2) > 0)
         {
-            compare1.setText("User1 has more funds than User2.");
+            compare1.setText("User1 has more funds than User2.    User1 has " + fmt.format(user1.getFunds()) + ".  User2 has " + fmt.format(user2.getFunds()) + ".");
         }
         else
         {
-            compare1.setText("User1 has less funds than User2.");
+            compare1.setText("User1 has less funds than User2.    User1 has " + fmt.format(user1.getFunds()) + ".  User2 has " + fmt.format(user2.getFunds()) + ".");
         }
 
         // compare user 1 funds with user 3
         if (user1.compareTo(user3) == 0)
         {
-            compare2.setText("User1 has the same amount as User3.");
+            compare2.setText("User1 has the same amount as User3.    User1 has " + fmt.format(user1.getFunds()) + ".  User3 has " + fmt.format(user3.getFunds()) + ".");
         }
         else if (user1.compareTo(user3) > 0)
         {
-            compare2.setText("User1 has more funds than User3.");
+            compare2.setText("User1 has more funds than User3.    User1 has " + fmt.format(user1.getFunds()) + ".  User3 has " + fmt.format(user3.getFunds()) + ".");
         }
         else
         {
-            compare2.setText("User1 has less funds than User3.");
+            compare2.setText("User1 has less funds than User3.    User1 has " + fmt.format(user1.getFunds()) + ".  User3 has " + fmt.format(user3.getFunds()) + ".");
         }
 
 //        // define input

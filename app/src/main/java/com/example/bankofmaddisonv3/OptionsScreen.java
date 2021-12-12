@@ -18,7 +18,7 @@ public class OptionsScreen extends AppCompatActivity {
 
         // sets user textbox at bottom left to username
         // implements LoginScreen class by passing in username
-        TextView displayUserID = (TextView)findViewById(R.id.displayUserID);
+        TextView displayUserID = (TextView)findViewById(R.id.displayUserID_options);
         displayUserID.setText(LoginScreen.getUsername());
 
         // define compare button

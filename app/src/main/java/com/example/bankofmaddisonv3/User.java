@@ -5,7 +5,7 @@ public class User implements Comparable
     // 1) Initialize variables
     private String username;
     private String password;
-    private static double funds;
+    private double funds;
 
     // 2) Constructors
     public User (String username, String password, double funds)
@@ -18,7 +18,14 @@ public class User implements Comparable
     public User (double funds)
     {
         this.funds = funds;
-    } // end full constructor
+    } // end funds constructor
+
+    public User ()
+    {
+        this.username = "";
+        this.password = "";
+        this.funds = 0;
+    }
 
     // 3) Getters
     public String getUsername ()
@@ -29,33 +36,33 @@ public class User implements Comparable
     {
         return password;
     }
-    public static double getFunds()
+    public double getFunds()
     {
         return funds;
     }
 
-//    // 4) Setters
-//    public void setUsername (String username)
-//    {
-//        this.username = username;
-//    }
-//    public void setPassword (String password)
-//    {
-//        this.password = password;
-//    }
-//    public void setFunds (double funds)
-//    {
-//        this.funds = funds;
-//    }
+    // 4) Setters
+    public void setUsername (String username)
+    {
+        this.username = username;
+    }
+    public void setPassword (String password)
+    {
+        this.password = password;
+    }
+    public void setFunds (double funds)
+    {
+        this.funds = funds;
+    }
 
     @Override
-    public int compareTo(Object otherUser) {
+    public int compareTo(Object ou) {
         int output = 0;
-        if (this.funds < ((User)otherUser).getFunds())
+        if (this.funds < ((User)ou).getFunds())
         {
             output = -1;
         }
-        else if (this.funds > ((User)otherUser).getFunds())
+        else if (this.funds > ((User)ou).getFunds())
         {
             output = 1;
         }

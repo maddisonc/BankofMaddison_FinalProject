@@ -22,21 +22,46 @@
 
     <TextView
         android:id="@+id/compareWithUser2Output"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="71dp"
+        android:layout_width="357dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="37dp"
         android:text="Comparison: "
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/compareTitle" />
 
     <TextView
         android:id="@+id/compareWithUser3Output"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="134dp"
+        android:layout_width="358dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="37dp"
         android:text="Comparison #2:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/compareWithUser2Output" />
+
+    <TextView
+        android:id="@+id/currentUserText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="16dp"
+        android:text="Current User:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/displayUserID_compare" />
+
+    <TextView
+        android:id="@+id/displayUserID_compare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="current user"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

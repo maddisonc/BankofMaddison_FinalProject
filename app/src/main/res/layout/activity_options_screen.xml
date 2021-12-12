@@ -60,7 +60,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/displayUserID"
+        android:id="@+id/displayUserID_options"
         android:layout_width="50dp"
         android:layout_height="24dp"
         android:layout_marginEnd="7dp"
@@ -77,7 +77,7 @@
         android:layout_marginBottom="21dp"
         android:text="Current User:"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/displayUserID" />
+        app:layout_constraintEnd_toStartOf="@+id/displayUserID_options" />
 
     <Button
         android:id="@+id/compareButton"
