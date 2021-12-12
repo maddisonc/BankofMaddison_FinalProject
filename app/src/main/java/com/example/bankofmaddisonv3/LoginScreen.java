@@ -8,9 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
-
-import java.lang.reflect.Array;
 
 public class LoginScreen extends AppCompatActivity {
 
@@ -31,11 +30,25 @@ public class LoginScreen extends AppCompatActivity {
     private EditText usernameInput;
     private EditText passwordInput;
 
+    // stores number of users
+    int numUsers;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // sets textView to number of users
+//        TextView numUsersDisplay = (TextView)findViewById(R.id.displayUsersNum);
+//        for (int i = 0; i < usernamesArr.length-1; i++)
+//        {
+//            numUsers++;
+//        } // end for loop to count how many users in array
+//        numUsersDisplay.setText(numUsers);
+
+        TextView numUsersDisplay = (TextView)findViewById(R.id.displayUsersNum);
+        numUsersDisplay.setText(setNumUsers() + " ");
 
         // define inputs
         usernameInput = findViewById(R.id.usernameInput);
@@ -122,6 +135,16 @@ public class LoginScreen extends AppCompatActivity {
         } // end loop that lasts as long as number of usernames in array
         return isValid;
     } // end login validator
+
+    public int setNumUsers ()
+    {
+        int userCount = 0;
+        for (int i = 0; i < usernamesArr.length; i++)
+        {
+            userCount++;
+        }
+        return userCount;
+    }
 
     // opens options screen
     public void openAfterLogin()

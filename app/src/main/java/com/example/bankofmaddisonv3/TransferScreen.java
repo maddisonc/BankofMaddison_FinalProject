@@ -56,7 +56,7 @@ public class TransferScreen extends AppCompatActivity {
                     }
                     else
                     {
-                        Toast.makeText(TransferScreen.this, "Funds will be sent!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(TransferScreen.this, "Funds will be sent after review!", Toast.LENGTH_SHORT).show();
                     }
                 } // end else fields are not empty
             } // end onClick

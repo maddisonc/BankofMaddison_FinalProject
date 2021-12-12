@@ -2,12 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/displayNumUsers"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OptionsScreen">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/optionsTitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
@@ -16,13 +17,13 @@
         android:layout_marginBottom="123dp"
         android:text="Welcome to the Bank of Maddison Mobile App"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/accButton"
+        app:layout_constraintBottom_toTopOf="@+id/accButton_options"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/accButton"
+        android:id="@+id/accButton_options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
@@ -31,10 +32,10 @@
         android:text="Account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/optionsTitleText" />
 
     <Button
-        android:id="@+id/transferButton"
+        android:id="@+id/transferButton_options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="149dp"
@@ -42,13 +43,13 @@
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="107dp"
         android:text="Transfer"
-        app:layout_constraintBottom_toTopOf="@+id/requestButton"
+        app:layout_constraintBottom_toTopOf="@+id/requestButton_options"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accButton" />
+        app:layout_constraintTop_toBottomOf="@+id/accButton_options" />
 
     <Button
-        android:id="@+id/requestButton"
+        android:id="@+id/requestButton_options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="154dp"
@@ -80,7 +81,7 @@
         app:layout_constraintEnd_toStartOf="@+id/displayUserID_options" />
 
     <Button
-        android:id="@+id/compareButton"
+        android:id="@+id/compareButton_options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"

@@ -1,5 +1,7 @@
 package com.example.bankofmaddisonv3;
 
+import static com.example.bankofmaddisonv3.LoginScreen.usernamesArr;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,13 +18,13 @@ public class OptionsScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options_screen);
 
-        // sets user textbox at bottom left to username
+        // sets user textView at bottom left to username
         // implements LoginScreen class by passing in username
         TextView displayUserID = (TextView)findViewById(R.id.displayUserID_options);
         displayUserID.setText(LoginScreen.getUsername());
 
         // define compare button
-        Button compare = findViewById(R.id.compareButton);
+        Button compare = findViewById(R.id.compareButton_options);
         // calls method to open acc screen
         compare.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +35,7 @@ public class OptionsScreen extends AppCompatActivity {
         }); // end acc listener
 
         // define acc button
-        Button acc = findViewById(R.id.accButton);
+        Button acc = findViewById(R.id.accButton_options);
         // calls method to open acc screen
         acc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +46,7 @@ public class OptionsScreen extends AppCompatActivity {
         }); // end acc listener
 
         // define transfer button
-        Button transfer = findViewById(R.id.transferButton);
+        Button transfer = findViewById(R.id.transferButton_options);
         // calls method to open acc screen
         transfer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +57,7 @@ public class OptionsScreen extends AppCompatActivity {
         }); // end transfer listener
 
         // define request button
-        Button rq = findViewById(R.id.requestButton);
+        Button rq = findViewById(R.id.requestButton_options);
         // calls method to open acc screen
         rq.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -43,8 +43,8 @@
         android:id="@+id/fundsInput"
         android:layout_width="169dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="22dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/recipientIDInput"
@@ -55,7 +55,7 @@
         android:id="@+id/recipientIDInput"
         android:layout_width="168dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="73dp"
         android:ems="10"
         android:inputType="textEmailAddress"
@@ -71,6 +71,7 @@
         android:layout_marginBottom="239dp"
         android:text="Transfer Funds"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="#FFFCFD" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
